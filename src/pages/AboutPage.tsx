@@ -1,38 +1,35 @@
-import { routes } from "@/routes";
-import NavbarCentered from "@/components/ui/NavbarCentered";
-import AboutTextSplit from "@/components/sections/about/AboutTextSplit";
+import HeroSplit from "@/components/sections/hero/HeroSplit";
 import AboutFeaturesSplit from "@/components/sections/about/AboutFeaturesSplit";
-import FooterSimple from "@/components/sections/footer/FooterSimple";
+import TestimonialQuoteCards from "@/components/sections/testimonial/TestimonialQuoteCards";
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-background text-foreground">
-      <NavbarCentered
-        logo="FlowSoft"
-        navItems={[{"name":"Features","href":"/features"},{"name":"Pricing","href":"/pricing"},{"name":"About","href":"/about"},{"name":"Automation Suite","href":"/automation-suite"},{"name":"Contact","href":"/contact"}]}
-        ctaButton={{"text":"Start Free Trial","href":"/signup"}}
-      />
-      <AboutTextSplit
-        title="FlowSoft: Empowering Your Business Through Intelligent Automation"
-        descriptions={["At FlowSoft, we believe that your time is best spent on innovation, not repetition. Our mission is to empower businesses of all sizes to work smarter by providing an intuitive, powerful automation platform that eliminates tedious tasks and streamlines complex workflows. We're dedicated to transforming how teams operate, enabling them to achieve more with less effort and focus on what truly matters.","Born from a vision to simplify the intricate world of business processes, FlowSoft delivers a no-code solution that connects your entire operational ecosystem in minutes. We focus on tangible results, helping you see significant improvements in productivity and efficiency within your first week. Our platform is designed for clarity, confidence, and rapid value delivery, ensuring you can focus on strategic growth without technical hurdles.","We are committed to continuous innovation, ensuring our platform remains at the forefront of automation technology. FlowSoft is more than just a tool; it's a partner in your journey towards enhanced productivity, offering the flexibility and power you need to adapt and thrive in a fast-evolving market. Join us in building a future where every workflow is optimized, and every team member is empowered."]}
-        primaryButton={{"text":"Start Your Free Trial","href":"/signup"}}
-        secondaryButton={{"text":"Explore Features","href":"/features"}}
+    <>
+      <HeroSplit
+        tag="About Us"
+        title="FlowSoft: Pioneering Effortless Automation for Every Business"
+        description="At FlowSoft, we believe productivity shouldn't be complex. Our mission is to empower businesses of all sizes to work smarter by eliminating repetitive tasks and seamlessly connecting workflows. We deliver powerful, no-code automation solutions that provide tangible results, often within your first week, transforming how you operate without requiring technical expertise."
+        primaryButton={{"text":"Explore Our Automation Suite","href":"/automation-suite"}}
+        secondaryButton={{"text":"Request a Personalized Demo","href":"/contact"}}
+        imageSrc="https://images.unsplash.com/photo-1556761175-5973dd30cb28?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
       <AboutFeaturesSplit
         tag="About FlowSoft"
         title="Empowering Your Business with Seamless Automation"
-        description="At FlowSoft, we believe that work should be smart, not hard. Our mission is to free businesses from repetitive tasks and complex workflows, enabling teams to focus on innovation and growth. We've built a powerful, intuitive platform that connects your entire operation, automates critical processes, and delivers measurable results—all without a single line of code. Join us in shaping a future where efficiency is effortless."
-        primaryButton={{"text":"Request a Demo","href":"/contact#demo"}}
-        secondaryButton={{"text":"Explore Features","href":"/features"}}
-        items={[{"icon":"Zap","title":"No-Code Simplicity","description":"Build powerful automations and integrate your favorite apps with an intuitive drag-and-drop interface. No technical expertise required."},{"icon":"Rocket","title":"Boost Productivity","description":"Eliminate manual data entry, streamline approvals, and automate routine tasks to reclaim valuable time for strategic initiatives."},{"icon":"Link","title":"Seamless Integration","description":"Connect all your essential business tools and applications, creating a unified and efficient workflow across your entire organization."},{"icon":"BarChart2","title":"Data-Driven Insights","description":"Gain real-time visibility into your automated processes with comprehensive analytics, helping you make informed decisions and optimize performance."}]}
-        imageSrc="https://images.unsplash.com/photo-1556761175-5973ddf32d8f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        description="At FlowSoft, we believe that every business, regardless of size or technical expertise, deserves the power of efficient automation. We're dedicated to building intuitive solutions that eliminate repetitive tasks, connect disparate systems, and free your team to focus on what truly matters: innovation and growth. Our commitment is to deliver tangible results, fast, transforming how you work and accelerating your success."
+        primaryButton={{"text":"Start Your Free Trial","href":"/signup"}}
+        secondaryButton={{"text":"Explore Our Features","href":"/features"}}
+        items={[{"icon":"Sparkles","title":"No-Code Automation","description":"Build powerful workflows with drag-and-drop ease. No technical skills required, just pure productivity from day one."},{"icon":"Rocket","title":"Rapid Deployment & Results","description":"Go from idea to automated workflow in minutes and see measurable impact within your first week."},{"icon":"Link","title":"Seamless Workflow Integration","description":"Connect all your essential apps and services, creating a unified and intelligent operational ecosystem."},{"icon":"Target","title":"Empower Your Team","description":"Free your employees from mundane tasks, allowing them to dedicate their talents to strategic initiatives and innovation."}]}
+        imageSrc="https://images.unsplash.com/photo-1556761175-5973dd0fd069?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80"
       />
-      <FooterSimple
-        brand="FlowSoft"
-        columns={[{"title":"Solutions","items":[{"label":"Automation Suite","href":"/automation-suite"},{"label":"Workflow Analytics","href":"/workflow-analytics"},{"label":"Integrations","href":"/integrations"},{"label":"Process Optimization","href":"/process-optimization"}]},{"title":"Company","items":[{"label":"About Us","href":"/about"},{"label":"Careers","href":"/careers"},{"label":"Blog","href":"/blog"},{"label":"Partners","href":"/partners"}]},{"title":"Resources","items":[{"label":"Help Center","href":"/help"},{"label":"Contact Sales","href":"/contact-sales"},{"label":"Privacy Policy","href":"/privacy"},{"label":"Terms of Service","href":"/terms"}]}]}
-        copyright="© 2024 FlowSoft. All rights reserved."
-        links={[{"label":"Features","href":"/features"},{"label":"Pricing","href":"/pricing"},{"label":"About","href":"/about"},{"label":"Contact","href":"/contact"}]}
+      <TestimonialQuoteCards
+        tag="Customer Success"
+        title="See How FlowSoft Empowers Businesses Like Yours"
+        description="Don't just take our word for it. Read how FlowSoft's intuitive automation platform has helped our clients streamline operations, eliminate manual tasks, and achieve significant productivity gains, often within their first week. Experience the tangible benefits of smart automation."
+        primaryButton={{"text":"Start Your Free Trial","href":"/signup"}}
+        secondaryButton={{"text":"Explore All Case Studies","href":"/case-studies"}}
+        testimonials={[{"name":"Sarah Chen","role":"Operations Manager, Apex Solutions","quote":"FlowSoft transformed our onboarding process. What used to take days of manual data entry now happens automatically in minutes. The best part? We saw results in our first week, and I didn't write a single line of code!","imageSrc":"https://images.unsplash.com/photo-1573496359142-b862b8ce0146?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTMzNXwwfDF8c2VhcmNofDEzfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMGhlYWRzaG90fGVufDB8fHx8MTcwOTQ1NjU3Nnww&ixlib=rb-4.0.3&q=80&w=1080"},{"name":"David Miller","role":"Head of Marketing, InnovateX","quote":"Integrating our marketing tools with FlowSoft was a game-changer. We've automated lead nurturing and reporting, freeing up countless hours for our team to focus on strategy. It's incredibly powerful yet surprisingly simple to use.","imageSrc":"https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTMzNXwwfDF8c2VhcmNofDEwfHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MHx8fHwxNzA5NDU2NTc2fDA&ixlib=rb-4.0.3&q=80&w=1080"},{"name":"Emily Rodriguez","role":"Finance Director, GlobalTech","quote":"Our financial reporting used to be a bottleneck. FlowSoft allowed us to automate data consolidation and report generation, drastically reducing errors and speeding up our monthly close. It's an indispensable tool for our team now.","imageSrc":"https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTMzNXwwfDF8c2VhcmNofDIyfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMGhlYWRzaG90fGVufDB8fHx8MTcwOTQ1NjU3Nnww&ixlib=rb-4.0.3&q=80&w=1080"}]}
       />
-    </div>
+    </>
   );
 }
